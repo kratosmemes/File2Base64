@@ -7,36 +7,17 @@ function getBase64(file) {
     });
   }
   
-let boton = document.getElementById('some');
+let boton = document.getElementById('decode');
+let p_decoded =  document.getElementById('decoded_string')
+let img_decoded = document.getElementById('decoded');
 boton.addEventListener('click' , ()=>{
 
     var file = document.querySelector('#imagen').files[0];
-    console.log(file)
     getBase64(file).then(
-      data => console.log(data)
+      data => { 
+        img_decoded.src=data
+        p_decoded.textContent = data
+            }
     );
 });
 
-const qwe = document.getElementById('123');
-qwe.src=
-
-/////////////////////
-
-// function getDataUrl(img){
-//     const canvas = document.createElement('canvas');
-//     const ctx = canvas.getContext('2d');
-
-
-//     canvas.width = img.width;
-//     canvas.height = img.width;
-
-//     ctx.drawImage(img, 0 , 0);
-//     return(canvas.toDataURL('image/png'))
-// }
-
-
-// const img = document.querySelector('#imagen');
-// img.addEventListener('load', function (event) {
-//    const dataUrl = getDataUrl(event.currentTarget);
-//    console.log(dataUrl);
-// });

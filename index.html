@@ -4,13 +4,16 @@
         <div>
             <label>Select your file</label><br><br>
             <input type="file" id="imagen"><br><br>
-            <button>Conver to Base64</button>
+            <button id="decode">Conver to Base64</button>
+
         </div>
         <div>
-            <img>
-        </div>
-    </div>    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-
+            <label>Decode Image</label>
+            <input type="text">
+            <button id="">Decode</button><br><br>
+            <img id="decoded" style="width: 20rem; height: 20rem;">
+            <p id="decoded_string" style="width: 10 rem; height: 15rem; overflow: scroll;"></p>
+        </div> 
+    </div>
     <script src="script.js"></script>
-    <img id="qwe">
 </body>
