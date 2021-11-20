@@ -1,18 +1,29 @@
 <head></head>
 <body>  
+    <style>
+        #decoded_string{
+            background-color: #eee;
+            width: 500px;
+            height: 50px;
+            overflow-x: scroll;
+            font-size: 20;
+        }
+    </style>
     <div>
         <div>
-            <label>Select your file</label><br><br>
-            <input type="file" id="imagen"><br><br>
-            <button id="decode">Conver to Base64</button>
+            <label>Select your file</label><br>
+            <input type="file" id="imagen" style="font-size: 11;"><br><br>
+            <label>Click to convert</label><br>
+            <button id="decode">•</button>
 
         </div>
+        <hr>
         <div>
-            <label>Decode Image</label>
-            <input type="text">
-            <button id="">Decode</button><br><br>
+            <label>Base64 String</label>
+            <div id="decoded_string"></div>
+            <hr>
+            <button id="decode_button">Decode Base64</button><br><br>
             <img id="decoded" style="width: 20rem; height: 20rem;">
-            <p id="decoded_string" style="width: 10 rem; height: 15rem; overflow: scroll;"></p>
         </div> 
     </div>
     <script src="script.js"></script>
